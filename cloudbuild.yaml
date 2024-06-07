@@ -1,0 +1,17 @@
+steps:
+  - name: gcr.io/cloud-builders/git
+    id: git-unshallow-fetch
+    args: ['fetch', '--unshallow']
+  - name: hashicorp/terraform:1.0.0
+    id: terraform-init-plan
+    entrypoint: 'sh'
+    args:
+      - '-c'
+      - >-
+        export TF_LOG_CORE=TRACE && export TF_LOG_PATH=logs.txt && terraform
+        init && terraform plan || if [ -f logs.txt ]; then cat logs.txt; exit 1;
+        else echo "logs.txt does not exist"; exit 1; fi
+
+logsBucket: 'gs://cloud_build_isolator'
+options:
+      logging: GCS_ONLY
