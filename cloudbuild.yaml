@@ -15,3 +15,6 @@ steps:
 logsBucket: 'gs://cloud_build_isolator'
 options:
       logging: GCS_ONLY
+
+
+      #test
