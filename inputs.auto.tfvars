@@ -19,19 +19,19 @@
  *****************************************/
 #TODO - Update inputs
 # Service Accounts
-sa_01_resource_hierarchy         = ""
-sa_02_org_policies               = ""
-sa_03_vpc_sc                     = ""
-sa_04_security_projects          = ""
-sa_05_security_project_resources = ""
-sa_06_data_projects              = ""
-sa_07_data_projects_resources    = ""
+sa_01_resource_hierarchy         = "billing-manager@isolator-base-project.iam.gserviceaccount.com"
+sa_02_org_policies               = "billing-manager@isolator-base-project.iam.gserviceaccount.com"
+sa_03_vpc_sc                     = "billing-manager@isolator-base-project.iam.gserviceaccount.com"
+sa_04_security_projects          = "billing-manager@isolator-base-project.iam.gserviceaccount.com"
+sa_05_security_project_resources = "billing-manager@isolator-base-project.iam.gserviceaccount.com"
+sa_06_data_projects              = "billing-manager@isolator-base-project.iam.gserviceaccount.com"
+sa_07_data_projects_resources    = "billing-manager@isolator-base-project.iam.gserviceaccount.com"
 
 # Commented out before creating an actual org-level log sink.
 # isolator_log_bucket_log_sink_org_node_writer = ""
 
 # Groups
-grp_isolator_security_team = ""
+grp_isolator_security_team = "iso-sec-group@biniayalew.joonix.net"
 
 approved_security_users = [
   "", # Users need to be in the format user:jdoe@example.com
@@ -42,5 +42,5 @@ approved_data_users = [
 ]
 
 # VPC-SC Related
-access_policy_name              = "" # This is the numeric name of your access policy.
+access_policy_name              = "377008876668" # This is the numeric name of your access policy.
 required_minimum_chrome_version = "113.0.5672.134"

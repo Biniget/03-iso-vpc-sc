@@ -20,7 +20,7 @@
 # TODO - Edit below with appropriate backend (does not need to be GCS)
 terraform {
   backend "gcs" {
-    bucket = ""
+    bucket = "03-iso-vpc-sc-tfstate"
     prefix = ""
   }
 }
@@ -36,7 +36,7 @@ terraform {
 data "terraform_remote_state" "rs_01_iso_resource_hierarchy" {
   backend = "gcs"
   config  = {
-    bucket = ""
+    bucket = "isolator-base-project-tfstate"
     prefix = ""
   }
 }
