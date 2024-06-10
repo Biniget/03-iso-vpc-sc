@@ -61,12 +61,12 @@ resource "google_access_context_manager_service_perimeter" "isolator_data" {
     resources = local.project_numbers_data_formatted
 
     #TODO Delete only needed for Isolator testing
-    access_levels = [
+   # access_levels = [
       # Below is required for the internal testing environment for Isolator.
       # Appropriate access to talk to GCP APIs from pipeline SA will need to
       # be solutioned based on each customer's environment setup
-      google_access_context_manager_access_level.iac_service_accounts.id,
-    ]
+   #   google_access_context_manager_access_level.iac_service_accounts.id,
+   # ]
 
     /* The below block is to allow Isolator users to access projects inside the
       Isolator data perimeter. It follows the device requirements defined for devices.
