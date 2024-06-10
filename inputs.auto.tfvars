@@ -34,11 +34,11 @@ sa_07_data_projects_resources    = "billing-manager@isolator-base-project.iam.gs
 grp_isolator_security_team = "iso-sec-group@biniayalew.joonix.net"
 
 approved_security_users = [
-  "", # Users need to be in the format user:jdoe@example.com
+  "bini@biniayalew.joonix.net", # Users need to be in the format user:jdoe@example.com
 ]
 
 approved_data_users = [
-  "", # Users need to be in the format user:jdoe@example.com
+  "bini@biniayalew.joonix.net", # Users need to be in the format user:jdoe@example.com
 ]
 
 # VPC-SC Related
