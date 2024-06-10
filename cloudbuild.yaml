@@ -3,18 +3,15 @@ steps:
     id: git-unshallow-fetch
     args: ['fetch', '--unshallow']
   - name: hashicorp/terraform:1.0.0
-    id: terraform-init-plan
+    id: terraform-init-apply
     entrypoint: 'sh'
     args:
       - '-c'
       - >-
         export TF_LOG_CORE=TRACE && export TF_LOG_PATH=logs.txt && terraform
-        init && terraform plan || if [ -f logs.txt ]; then cat logs.txt; exit 1;
+        init && terraform apply -auto-approve || if [ -f logs.txt ]; then cat logs.txt; exit 1;
         else echo "logs.txt does not exist"; exit 1; fi
 
 logsBucket: 'gs://cloud_build_isolator'
 options:
       logging: GCS_ONLY
-
-
-      #test
